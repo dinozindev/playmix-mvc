@@ -138,6 +138,7 @@ az group create \
   --name $RESOURCE_GROUP_NAME \
   --location "$LOCATION"
 
+# Criação do SQL Server
 az sql server create \
   --name $SERVER_NAME \
   --resource-group $RESOURCE_GROUP_NAME \
@@ -146,6 +147,7 @@ az sql server create \
   --admin-password $DB_PASS \
   --enable-public-network true
 
+# Criação do Banco de Dados
 az sql db create \
   --resource-group $RESOURCE_GROUP_NAME \
   --server $SERVER_NAME \
